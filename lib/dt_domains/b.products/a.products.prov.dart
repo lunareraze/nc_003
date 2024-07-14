@@ -13,6 +13,8 @@ class ProductsProv {
 
   final collProduct = 'product';
 
+  final rxSelectedId = RM.inject(() => '');
+
   final rxProductLoader = RM.injectFuture<List<Product>>(
     () => Future.value([]),
     sideEffects: SideEffects(
@@ -31,4 +33,11 @@ class ProductsProv {
   final rxProductList = RM.inject<List<Product>>(
     () => [],
   );
+
+  //* to collect prod detail view
+
+  final rxProductDetail = RM.injectFuture<Product?>(() => Future.value(null),
+      sideEffects: SideEffects(
+        initState: () => _sv.initProductDetail(),
+      ));
 }

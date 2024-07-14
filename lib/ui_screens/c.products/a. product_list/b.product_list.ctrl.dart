@@ -16,4 +16,9 @@ class ProductListCtrl {
   //     logx.i(element.id);
   //   }
   // }
+
+  selectedid(String id) {
+    Serv.products.chooseSelectedId(id);
+    nav.to(Routes.productDetail);
+  }
 }

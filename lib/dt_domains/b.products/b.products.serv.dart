@@ -10,7 +10,7 @@ class ProductsServ {
   }
 
   void onSetState() {
-    logzz.i(ProductsServ, 'rxCounter setState success');
+    logzz.i(ProductsServ, 'rxCounter setState zsuccess');
   }
 
   //*--------------------------------------------------------------------------
@@ -27,6 +27,19 @@ class ProductsServ {
 
   createProductSv(Product product) async {
     await _rp.createDocumment(product);
+  }
+
+  //*--------------------------------------------------------------------------
+
+  initProductDetail() {
+    _pv.rxProductDetail.stateAsync = _rp.readDocumentDetail(_pv.rxSelectedId.st);
+  }
+
+  chooseSelectedId(String id) {
+    _pv.rxSelectedId.refresh();
+    _pv.rxSelectedId.setState(
+      (s) => id,
+    );
   }
 
   //*--------------------------------------------------------------------------
