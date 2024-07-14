@@ -7,6 +7,14 @@ class ProductDetailAppbar extends StatelessWidget {
   Widget build(BuildContext context) {
     return AppBar(
       title: OnReactive(() => Text(_dt.rxTitle.st)),
+      actions: [
+        IconButton(
+            onPressed: () async {
+              _ct.delete();
+              nav.back(Routes.productList);
+            },
+            icon: const Icon(Icons.delete))
+      ],
     );
   }
 }

@@ -10,4 +10,6 @@ class ProductDetailData {
   //*---------------------------------------------------------------------------
 
   final rxProductDetail = Prov.products.st.rxProductDetail;
+
+  final rxSelectedId = Prov.products.st.rxSelectedId;
 }

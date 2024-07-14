@@ -22,4 +22,9 @@ class ProductsRepoMock implements ProductsRepo {
   Future<Product> readDocumentDetail(String docId) {
     throw UnimplementedError();
   }
+
+  @override
+  Future<void> deleteDocument(String docId) {
+    throw UnimplementedError();
+  }
 }

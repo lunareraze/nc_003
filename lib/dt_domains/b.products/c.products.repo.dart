@@ -22,7 +22,7 @@ class ProductsRepo {
   }
 
   Future createDocumment(Product product) async {
-    await x1FbFireStore.st.createDocumernt(_pv.collProduct, product.id, product.toMap());
+    await x1FbFireStore.st.createDocument(_pv.collProduct, product.id, product.toMap());
   }
 
   //*--------------------------------------------------------------------------
@@ -30,5 +30,11 @@ class ProductsRepo {
   Future<Product> readDocumentDetail(String docId) async {
     final result = await x1FbFireStore.st.readProductDetail(_pv.collProduct, docId);
     return Product.fromMap(result.data() ?? {});
+  }
+
+  //*--------------------------------------------------------------------------
+
+  Future<void> deleteDocument(String docId) async {
+    await x1FbFireStore.st.deleteDocument(_pv.collProduct, docId);
   }
 }

@@ -43,4 +43,14 @@ class ProductsServ {
   }
 
   //*--------------------------------------------------------------------------
+
+  Future delete() async {
+    await _rp.deleteDocument(_pv.rxSelectedId.st);
+
+    _pv.rxProductList.st = [..._pv.rxProductList.st]..removeWhere(
+        (element) => element.id == _pv.rxSelectedId.st,
+      );
+  }
+
+  //*--------------------------------------------------------------------------
 }
