@@ -14,10 +14,10 @@ class ProductAddCtrl {
 
     final product = Product(
       id: id,
-      name: generateWordPairs().take(2).join('  '),
-      description: generateWordPairs().take(6).join('   '),
-      price: Random().nextInt(100),
-      quantity: Random().nextInt(100),
+      name: _dt.rxName.value,
+      price: int.parse(_dt.rxPrice.value),
+      quantity: int.parse(_dt.rxPrice.value),
+      description: _dt.rxDescription.value,
       createdAt: "",
       imageUrl: "",
     );
@@ -26,4 +26,6 @@ class ProductAddCtrl {
     _dt.rxProductList.st = [..._dt.rxProductList.st]..insert(0, product);
     nav.back();
   }
+
+  submitAdd() => _dt.rxForm.submit();
 }
