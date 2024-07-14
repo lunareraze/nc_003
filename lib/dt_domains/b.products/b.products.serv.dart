@@ -36,7 +36,7 @@ class ProductsServ {
   }
 
   chooseSelectedId(String id) {
-    _pv.rxSelectedId.refresh();
+    // _pv.rxSelectedId.refresh();
     _pv.rxSelectedId.setState(
       (s) => id,
     );
