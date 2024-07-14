@@ -7,6 +7,9 @@ Future<void> inits() async {
 
   Serv.sample.init();
 
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+
   logx.wtf('inits success');
   Serv.auth.init();
   Serv.products.init();

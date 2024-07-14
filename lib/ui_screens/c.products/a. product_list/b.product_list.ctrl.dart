@@ -6,4 +6,14 @@ class ProductListCtrl {
   increaseCounter() => _dt.rxCounter.setState((s) => s + 1);
 
   updateRandom() => Serv.sample.updateRandom();
+
+  //* ------------------------------------------------------------------------
+
+  // Future readCollection() async {
+  //   final result = await FirebaseFirestore.instance.collection('product').get();
+
+  //   for (var element in result.docs) {
+  //     logx.i(element.id);
+  //   }
+  // }
 }

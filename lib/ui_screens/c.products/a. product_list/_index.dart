@@ -17,4 +17,3 @@ part 'widgets/e.product_list.echo.dart';
 
 ProductListData get _dt => Data.productList.st;
 ProductListCtrl get _ct => Ctrl.productList;
-
