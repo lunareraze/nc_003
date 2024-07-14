@@ -5,19 +5,24 @@ class ProductAddView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      appBar: PreferredSize(
+    return Scaffold(
+      appBar: const PreferredSize(
         preferredSize: Size.fromHeight(56),
         child: ProductAddAppbar(),
       ),
-      floatingActionButton: ProductAddFab(),
+      floatingActionButton: const ProductAddFab(),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            ProductAddCharlie(),
-            ProductAddDelta(),
-            ProductAddEcho(),
+            ElevatedButton(
+              onPressed: () async {
+                _ct.createDocument();
+              },
+              child: const Text(
+                "create doc",
+              ),
+            ),
           ],
         ),
       ),

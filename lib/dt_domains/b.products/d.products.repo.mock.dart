@@ -12,4 +12,9 @@ class ProductsRepoMock implements ProductsRepo {
   Future<List<Product>> readProduct() {
     throw UnimplementedError();
   }
+
+  @override
+  Future createDocumment(Product product) {
+    throw UnimplementedError();
+  }
 }

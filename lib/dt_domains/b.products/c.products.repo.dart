@@ -20,4 +20,8 @@ class ProductsRepo {
 
     return product;
   }
+
+  Future createDocumment(Product product) async {
+    await x1FbFireStore.st.createDocumernt(_pv.collProduct, product.id, product.toMap());
+  }
 }

@@ -22,4 +22,12 @@ class ProductsServ {
   addToList(List<Product> moreDataProduct) async {
     _pv.rxProductList.st = [..._pv.rxProductList.state, ...moreDataProduct];
   }
+
+  //*--------------------------------------------------------------------------
+
+  createProductSv(Product product) async {
+    await _rp.createDocumment(product);
+  }
+
+  //*--------------------------------------------------------------------------
 }
