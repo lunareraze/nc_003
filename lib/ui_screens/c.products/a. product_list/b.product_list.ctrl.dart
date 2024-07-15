@@ -21,4 +21,8 @@ class ProductListCtrl {
     Serv.products.chooseSelectedId(id);
     nav.to(Routes.productDetail);
   }
+
+  signOut() async {
+    Serv.auth.signOut();
+  }
 }

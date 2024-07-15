@@ -6,10 +6,10 @@ class LoginView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const PreferredSize(
-        preferredSize: Size.fromHeight(56),
-        child: LoginAppbar(),
-      ),
+      // appBar: const PreferredSize(
+      //   preferredSize: Size.fromHeight(56),
+      //   child: LoginAppbar(),
+      // ),
       // floatingActionButton: const LoginFab(),
       body: Center(
         child: Padding(
@@ -40,7 +40,16 @@ class LoginView extends StatelessWidget {
                       SizedBoxH(20),
                       LoginPassword(),
                       SizedBoxH(20),
-                      LoginSubmit()
+                      LoginSubmit(),
+                      SizedBoxH(20),
+                      LoginOR(),
+                      SizedBoxH(20),
+                      LoginAnonymous(),
+                      SizedBoxH(20),
+                      LoginWithGoogle(),
+                      SizedBoxH(20),
+                      LoginToRegister(),
+                      SizedBoxH(20),
                     ],
                   ),
                 ),
