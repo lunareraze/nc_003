@@ -29,6 +29,10 @@ class AuthServ {
 
   Future signInAnonymously() async {
     await x1FbAuth.st.signInAnonymously();
+
+    _pv.rxUser.subscription = x1FbAuth.st.instance.authStateChanges().listen(
+          (event) => _pv.rxUser.st = event,
+        );
   }
 
   Future signInWithEmailAndPassword(String email, String password) async {

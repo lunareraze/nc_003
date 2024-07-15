@@ -35,6 +35,12 @@ class LoginView extends StatelessWidget {
                         textScaler: TextScaler.linear(3),
                         style: TextStyle(fontWeight: FontWeight.bold),
                       ),
+                      SizedBoxH(20),
+                      LoginEmail(),
+                      SizedBoxH(20),
+                      LoginPassword(),
+                      SizedBoxH(20),
+                      LoginSubmit()
                     ],
                   ),
                 ),
