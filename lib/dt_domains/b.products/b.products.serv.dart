@@ -68,4 +68,12 @@ class ProductsServ {
   }
 
   //*--------------------------------------------------------------------------
+
+  Future uploadImage(XFile? pickedImage, String docId) async {
+    final imageFromStorage = await _rp.uploadImage(pickedImage, _pv.rxSelectedId.state);
+
+    return imageFromStorage;
+  }
+
+  //*--------------------------------------------------------------------------
 }

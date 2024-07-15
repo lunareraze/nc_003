@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:math';
 
+import 'package:image_picker/image_picker.dart';
 import 'package:nc_003/dt_domains/_models/a.product.dart';
 import 'package:nc_003/dt_sources/_index.dart';
 import 'package:states_rebuilder/states_rebuilder.dart';
