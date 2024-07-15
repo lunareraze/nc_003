@@ -18,14 +18,24 @@ class ProductAddCtrl {
       price: int.parse(_dt.rxPrice.value),
       quantity: int.parse(_dt.rxPrice.value),
       description: _dt.rxDescription.value,
-      createdAt: "",
+      createdAt: DateTime.now().toString(),
       imageUrl: "",
     );
     // await FirebaseFirestore.instance.collection('product').doc().set(product.toMap());
-    Serv.products.createProductSv(product);
-    _dt.rxProductList.st = [..._dt.rxProductList.st]..insert(0, product);
+
+    final imageUrl = await Serv.products.uploadImage(_dt.rxPickedFile.state, product.id);
+    final productWithImage = product.copyWith(imageUrl: imageUrl);
+    await Serv.products.createProductSv(productWithImage);
+
+    _dt.rxProductList.st = [..._dt.rxProductList.st]..insert(0, productWithImage);
     nav.back();
   }
 
   submitAdd() => _dt.rxForm.submit();
+
+  pickedImage() async {
+    final imagePicker = await ImagePicker().pickImage(source: ImageSource.gallery);
+
+    _dt.rxPickedFile.st = imagePicker;
+  }
 }

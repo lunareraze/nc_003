@@ -31,7 +31,9 @@ class ProductAddView extends StatelessWidget {
                   SizedBoxH(20),
                   ProductAddDescription(),
                   SizedBoxH(30),
-                  ProductAddSubmit()
+                  ProductAddImage(),
+                  SizedBoxH(30),
+                  ProductAddSubmit(),
                 ],
               ),
             )),

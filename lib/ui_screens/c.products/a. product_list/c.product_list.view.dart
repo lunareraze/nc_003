@@ -29,33 +29,13 @@ class ProductListView extends StatelessWidget {
                         _ct.selectedid(_dt.rxProductList.st[index].id);
                       },
                       selected: _dt.rxSelectedId.st == _dt.rxProductList.st[index].id,
-                      trailing: IconButton(
-                          onPressed: () async {
-                            final productEdit = Product(
-                              id: _dt.rxProductList.st[index].id,
-                              name: generateWordPairs().take(2).join(''),
-                              price: Random().nextInt(100),
-                              quantity: Random().nextInt(100),
-                              description: generateWordPairs().take(5).join(''),
-                              imageUrl: '',
-                              createdAt: '',
-                            );
-
-                            await FirebaseFirestore.instance
-                                .collection('product')
-                                .doc(_dt.rxProductList.st[index].id)
-                                .set(productEdit.toMap());
-
-                            Prov.products.st.rxProductList.setState(
-                              (s) {
-                                final result = Prov.products.st.rxProductList.st.indexWhere(
-                                  (element) => element.id == _dt.rxProductList.st[index].id,
-                                );
-                                return s[result] = productEdit;
-                              },
-                            );
-                          },
-                          icon: const Icon(Icons.update)),
+                      leading: _dt.rxProductList.st[index].imageUrl.isNotEmpty
+                          ? SizedBox(
+                              height: 50,
+                              width: 50,
+                              child: Image.network(_dt.rxProductList.st[index].imageUrl),
+                            )
+                          : null,
                     ),
                   ),
                 ),

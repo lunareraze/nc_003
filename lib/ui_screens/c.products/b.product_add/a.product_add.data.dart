@@ -47,4 +47,10 @@ class ProductAddData {
       Validate.description,
     ],
   );
+
+  //* -------------------------------------------------------------------------
+
+  final rxPickedFile = RM.inject<XFile?>(
+    () => null,
+  );
 }
