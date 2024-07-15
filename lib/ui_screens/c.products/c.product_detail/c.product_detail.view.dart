@@ -21,6 +21,16 @@ class ProductDetailView extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
+                OnReactive(
+                  () => data!.imageUrl.isNotEmpty
+                      ? SizedBox(
+                          height: 200,
+                          width: 200,
+                          child: Image.network(data.imageUrl),
+                        )
+                      : const SizedBox.shrink(),
+                ),
+                const SizedBoxH(20),
                 Text('${data?.id}'),
                 Text('${data?.name}'),
                 Text('${data?.price}'),

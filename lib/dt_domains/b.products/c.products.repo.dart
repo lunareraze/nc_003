@@ -46,15 +46,16 @@ class ProductsRepo {
 
   //*--------------------------------------------------------------------------
 
-  Future uploadImage(XFile? pickedImage, String ref) async {
-    final result = await x1Storage.st.uploadImage(
+  Future<String> uploadImage(XFile? pickedImage, String ref) async {
+    logx.i('${_pv.collProduct}/$ref');
+    final result = await x1Storage.state.uploadImage(
       pickedFile: pickedImage,
-      ref: '${_pv.collProduct}/${_pv.rxSelectedId.st}',
+      ref: '${_pv.collProduct}/$ref',
     );
     return result;
   }
 
-  Future delete() async {
+  Future<void> deleteImage() async {
     await x1Storage.st.deleteImage('${_pv.collProduct}/${_pv.rxSelectedId.st}');
   }
 

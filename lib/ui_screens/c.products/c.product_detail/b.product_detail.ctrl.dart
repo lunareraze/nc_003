@@ -9,7 +9,7 @@ class ProductDetailCtrl {
 
   //*--------------------------------------------------------------------------
 
-  delete() {
-    Serv.products.delete();
+  delete() async {
+    await Serv.products.delete();
   }
 }

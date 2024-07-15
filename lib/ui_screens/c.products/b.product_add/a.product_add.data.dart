@@ -20,7 +20,6 @@ class ProductAddData {
     validateOnTyping: true,
     validators: [
       Validate.isNotEmpty,
-      Validate.fullName,
     ],
   );
 

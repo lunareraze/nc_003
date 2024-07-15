@@ -19,11 +19,11 @@ class ProductAddCtrl {
       quantity: int.parse(_dt.rxPrice.value),
       description: _dt.rxDescription.value,
       createdAt: DateTime.now().toString(),
-      imageUrl: "",
     );
     // await FirebaseFirestore.instance.collection('product').doc().set(product.toMap());
+    logx.i(product.id);
 
-    final imageUrl = await Serv.products.uploadImage(_dt.rxPickedFile.state, product.id);
+    final imageUrl = await Serv.products.uploadImage(_dt.rxPickedFile.st, product.id);
     final productWithImage = product.copyWith(imageUrl: imageUrl);
     await Serv.products.createProductSv(productWithImage);
 

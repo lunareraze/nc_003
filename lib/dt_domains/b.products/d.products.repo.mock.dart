@@ -34,12 +34,12 @@ class ProductsRepoMock implements ProductsRepo {
   }
 
   @override
-  Future uploadImage(XFile? pickedImage, String ref) {
+  Future deleteImage() {
     throw UnimplementedError();
   }
 
   @override
-  Future delete() {
+  Future<String> uploadImage(XFile? pickedImage, String ref) {
     throw UnimplementedError();
   }
 }

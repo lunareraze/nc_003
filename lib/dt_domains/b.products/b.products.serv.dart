@@ -36,7 +36,7 @@ class ProductsServ {
   }
 
   chooseSelectedId(String id) {
-    // _pv.rxSelectedId.refresh();
+    _pv.rxSelectedId.refresh();
     _pv.rxSelectedId.setState(
       (s) => id,
     );
@@ -45,6 +45,11 @@ class ProductsServ {
   //*--------------------------------------------------------------------------
 
   Future delete() async {
+    if (_pv.rxProductDetail.st!.imageUrl.isNotEmpty) {
+      await _rp.deleteImage();
+    }
+    logx.e('huuuu');
+
     await _rp.deleteDocument(_pv.rxSelectedId.st);
 
     _pv.rxProductList.st = [..._pv.rxProductList.st]..removeWhere(
@@ -70,7 +75,8 @@ class ProductsServ {
   //*--------------------------------------------------------------------------
 
   Future uploadImage(XFile? pickedImage, String docId) async {
-    final imageFromStorage = await _rp.uploadImage(pickedImage, _pv.rxSelectedId.state);
+    // final imageFromStorage = await _rp.uploadImage(pickedImage, _pv.rxSelectedId.state);
+    final imageFromStorage = await _rp.uploadImage(pickedImage, docId);
 
     return imageFromStorage;
   }

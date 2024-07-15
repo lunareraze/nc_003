@@ -1,9 +1,6 @@
 import 'dart:math';
 
-import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:english_words/english_words.dart';
 import 'package:flutter/material.dart';
-import 'package:nc_003/dt_domains/_models/a.product.dart';
 import 'package:states_rebuilder/states_rebuilder.dart';
 
 import '../../../app/_index.dart';
