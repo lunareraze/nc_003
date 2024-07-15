@@ -53,4 +53,19 @@ class ProductsServ {
   }
 
   //*--------------------------------------------------------------------------
+
+  Future updateProductSv(Product product) async {
+    await _rp.createDocumment(product);
+
+    Prov.products.st.rxProductList.setState(
+      (s) {
+        final result = _pv.rxProductList.st.indexWhere(
+          (element) => element.id == _pv.rxSelectedId.st,
+        );
+        return s[result] = product;
+      },
+    );
+  }
+
+  //*--------------------------------------------------------------------------
 }

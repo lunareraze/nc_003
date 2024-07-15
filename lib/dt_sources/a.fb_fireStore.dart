@@ -1,12 +1,10 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:states_rebuilder/states_rebuilder.dart';
-
-part '_index.dart';
+part of '_index.dart';
 
 final x1FbFireStore = RM.inject(() => FbFireStore(), debugPrintWhenNotifiedPreMessage: '');
 
 class FbFireStore {
   final instance = FirebaseFirestore.instance;
+
   Future<QuerySnapshot<Map<String, dynamic>>> readCollection(String collProduct) async {
     final result = await instance.collection(collProduct).get();
 
@@ -25,5 +23,13 @@ class FbFireStore {
 
   Future<void> deleteDocument(String collProduct, String docId) async {
     await instance.collection(collProduct).doc(docId).delete();
+  }
+
+  Future<void> updateDocumment(
+    String collProduct,
+    String docId,
+    Map<String, dynamic> map,
+  ) async {
+    await FirebaseFirestore.instance.collection(collProduct).doc(docId).set(RouteMap.data);
   }
 }

@@ -37,4 +37,12 @@ class ProductsRepo {
   Future<void> deleteDocument(String docId) async {
     await x1FbFireStore.st.deleteDocument(_pv.collProduct, docId);
   }
+
+  //*--------------------------------------------------------------------------
+
+  Future<dynamic> updateProduct(Product product) async {
+    await x1FbFireStore.st.createDocument(_pv.collProduct, product.id, product.toMap());
+  }
+
+  //*--------------------------------------------------------------------------
 }
