@@ -1,41 +1,70 @@
 {
   "project_info": {
-    "project_number": "738480845733",
-    "project_id": "nostracode-003-fb233",
-    "storage_bucket": "nostracode-003-fb233.appspot.com"
+    "project_number": "945397266986",
+    "project_id": "nostracode-003z",
+    "storage_bucket": "nostracode-003z.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:738480845733:android:946ae5b6b00bb0ccdd2e4c",
+        "mobilesdk_app_id": "1:945397266986:android:7a875f1639b36e7e44a153",
         "android_client_info": {
-          "package_name": "com.nc_003.app"
+          "package_name": "com.nc_0"
         }
       },
       "oauth_client": [
         {
-          "client_id": "738480845733-dmuvqk0q7e7p700ouvq80v6u5o4n2cel.apps.googleusercontent.com",
+          "client_id": "945397266986-jp9chgkfn531m0m79jpp8loq2vujrngh.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.nc_003.app",
+            "package_name": "com.nc_0",
             "certificate_hash": "9daf9a56af43771e8dbc00a2ff348c844bc1187a"
           }
         },
         {
-          "client_id": "738480845733-k5neldjqmlv3fv1dpi41evgfhgsls7ms.apps.googleusercontent.com",
+          "client_id": "945397266986-e6ppqsg7hmt6v07cn87ma848andr3116.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyADzo_5vTkWGFurkRS40lxTqJg3ucZ1msM"
+          "current_key": "AIzaSyBJx93XZLGL_Gzmei7EiNopaIiEvvpBoNo"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "738480845733-k5neldjqmlv3fv1dpi41evgfhgsls7ms.apps.googleusercontent.com",
+              "client_id": "945397266986-e6ppqsg7hmt6v07cn87ma848andr3116.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:945397266986:android:f186e30b4ad1877144a153",
+        "android_client_info": {
+          "package_name": "com.nc_003.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "945397266986-e6ppqsg7hmt6v07cn87ma848andr3116.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJx93XZLGL_Gzmei7EiNopaIiEvvpBoNo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "945397266986-e6ppqsg7hmt6v07cn87ma848andr3116.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
