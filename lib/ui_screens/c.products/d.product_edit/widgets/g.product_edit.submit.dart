@@ -15,8 +15,8 @@ class ProductEditSubmit extends StatelessWidget {
               child: OutlinedButton(
                 onPressed: () {
                   _ct.submitEdit();
-                  nav.back();
-                  nav.back();
+                  // nav.back();
+                  // nav.back();
                 },
                 child: const Text('submit'),
               ),

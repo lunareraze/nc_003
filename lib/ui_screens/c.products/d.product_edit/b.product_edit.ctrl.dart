@@ -10,18 +10,32 @@ class ProductEditCtrl {
   //*--------------------------------------------------------------------------
 
   Future updateProduct() async {
-    final productEdit = Product(
+    Product productEdit = Product(
       id: _dt.rxProductDetail.st!.id,
       name: _dt.rxName.value,
+      description: _dt.rxDescription.value,
       price: int.parse(_dt.rxPrice.value),
       quantity: int.parse(_dt.rxQuantity.value),
-      description: _dt.rxDescription.value,
-      // imageUrl: '',
-      // createdAt: '',
+      createdAt: _dt.rxProductDetail.st!.createdAt,
     );
 
-    Serv.products.updateProductSv(productEdit);
+    final imageUrl = await Serv.products.uploadImage(_dt.rxPickedFile.st, productEdit.id);
+    final productWithImage = productEdit.copyWith(imageUrl: imageUrl);
+    productEdit = productWithImage;
+
+    await Serv.products.updateProductSv(productEdit);
+
+    nav.back();
+    nav.back();
   }
 
   submitEdit() => _dt.rxForm.submit();
+
+  //*--------------------------------------------------------------------------
+
+  pickedImage() async {
+    final imagePicker = await ImagePicker().pickImage(source: ImageSource.gallery);
+
+    _dt.rxPickedFile.st = imagePicker;
+  }
 }

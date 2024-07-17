@@ -31,7 +31,10 @@ class ProductEditView extends StatelessWidget {
                     SizedBoxH(20),
                     ProductEditDescription(),
                     SizedBoxH(30),
-                    ProductEditSubmit()
+                    ProductEditImage(),
+                    SizedBoxH(30),
+                    ProductEditSubmit(),
+                    SizedBoxH(30),
                   ],
                 ),
               )),

@@ -1,4 +1,8 @@
+import 'dart:io';
+
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:nc_003/dt_domains/_models/a.product.dart';
 import 'package:nc_003/ui_widgets/spaces/_index.dart';
 import 'package:states_rebuilder/states_rebuilder.dart';
@@ -16,6 +20,7 @@ part 'widgets/d.product_edit.price.dart';
 part 'widgets/e.product_edit.quantity.dart';
 part 'widgets/f.product_edit.description.dart';
 part 'widgets/g.product_edit.submit.dart';
+part 'widgets/h.product_edit.image.dart';
 
 ProductEditData get _dt => Data.productEdit.st;
 ProductEditCtrl get _ct => Ctrl.productEdit;

@@ -10,6 +10,9 @@ class ProductEditData {
 
   final rxProductDetail = Prov.products.st.rxProductDetail;
 
+  final rxPickedFile = RM.inject<XFile?>(() => null);
+  //*---------------------------------------------------------------------------
+
   final rxForm = RM.injectForm(
     autovalidateMode: AutovalidateMode.onUserInteraction,
     submit: () async => _ct.updateProduct(),
@@ -20,7 +23,6 @@ class ProductEditData {
     validateOnTyping: true,
     validators: [
       Validate.isNotEmpty,
-      Validate.fullName,
     ],
   );
 

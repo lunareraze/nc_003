@@ -13,7 +13,7 @@ class ProductAddQuantity extends StatelessWidget {
               controller: _dt.rxQuantity.controller,
               focusNode: _dt.rxQuantity.focusNode,
               onEditingComplete: () => _dt.rxDescription.focusNode.requestFocus(),
-              keyboardType: TextInputType.name,
+              keyboardType: TextInputType.number,
               decoration: InputDecoration(
                 labelText: 'Product Quantity',
                 hintText: 'Filled with Quantity',

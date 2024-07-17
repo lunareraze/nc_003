@@ -13,7 +13,7 @@ class ProductAddPrice extends StatelessWidget {
               controller: _dt.rxPrice.controller,
               focusNode: _dt.rxPrice.focusNode,
               onEditingComplete: () => _dt.rxQuantity.focusNode.requestFocus(),
-              keyboardType: TextInputType.name,
+              keyboardType: TextInputType.number,
               decoration: InputDecoration(
                 labelText: 'Product Price',
                 hintText: 'Filled with Price',
