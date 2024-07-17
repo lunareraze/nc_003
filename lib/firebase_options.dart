@@ -50,20 +50,20 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyBxJCJ3gp4v8heArErW4T8SpAE5e6174hg',
-    appId: '1:945397266986:web:832e574cf608a64644a153',
-    messagingSenderId: '945397266986',
-    projectId: 'nostracode-003z',
-    authDomain: 'nostracode-003z.firebaseapp.com',
-    storageBucket: 'nostracode-003z.appspot.com',
-    measurementId: 'G-J3XQP4NRSW',
+    apiKey: 'AIzaSyDza53QPUsIW0hMRDZrhs-1uUh5Lgio9f8',
+    appId: '1:615117587258:web:bcdbc98e9bd5414af30603',
+    messagingSenderId: '615117587258',
+    projectId: 'nostracode-003',
+    authDomain: 'nostracode-003.firebaseapp.com',
+    storageBucket: 'nostracode-003.appspot.com',
+    measurementId: 'G-9EV3K1XSW6',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyBJx93XZLGL_Gzmei7EiNopaIiEvvpBoNo',
-    appId: '1:945397266986:android:f186e30b4ad1877144a153',
-    messagingSenderId: '945397266986',
-    projectId: 'nostracode-003z',
-    storageBucket: 'nostracode-003z.appspot.com',
+    apiKey: 'AIzaSyA07tateddrYGYAFgBIlw6i1YhZIeb73pk',
+    appId: '1:615117587258:android:86ee0ce6cd9ad187f30603',
+    messagingSenderId: '615117587258',
+    projectId: 'nostracode-003',
+    storageBucket: 'nostracode-003.appspot.com',
   );
 }
