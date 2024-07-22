@@ -31,6 +31,8 @@ migrate_working_dir/
 .pub/
 /build/
 .fttemplates/
+.readme_template/
+
 
 # Symbolication related
 app.*.symbols
